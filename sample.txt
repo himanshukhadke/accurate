@@ -1,1 +1,10 @@
-hello world
+#include<iostream>
+using namespace std;
+
+#define ERROR -1
+#define SUCCESS 0
+#define FAILURE 1
+
+int main(){
+	cout<<"Hello World"<<endl;
+} 

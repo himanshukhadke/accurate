@@ -21,15 +21,16 @@ int main(){
 	
 	while(!pq.empty()){
 		int u=s.begin()->second;
-		int w=s.begin()->first;
 		mst[u]=true;
 		s.erase(s.begin());
 		
 		for(auto it:adj[u]){
-			if(!mst[it] and keys[it] > w){
-				parent[it]=u;
-				keys[it]=w;
-				set.insert({keys[it],w})
+			int v=it.first;
+			int w=it.second;
+			if(!mst[v] and keys[v] > w){
+				parent[v]=u;
+				keys[v]=w;
+				set.insert({keys[v],w})
 			}	
 		}	
 	}

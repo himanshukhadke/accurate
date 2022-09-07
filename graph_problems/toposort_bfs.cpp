@@ -19,10 +19,10 @@ class Solution
 	        int top=q.front();
 	        q.pop();
 	        topo.push_back(top);
-	        for(auto i:adj[top]){
+	        for(auto i:adj[top]){ 
 	            --in[i];
-	            if(in[i]==0)
-	                q.push(i);
+	            if(in[i]==0)     //check if all dependancies are ended
+	                q.push(i);    // if ended the push it into stack and traverse the nodes dependant on that node
 	        }
 	    }
 	    return topo;
